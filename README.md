@@ -1,18 +1,19 @@
-🎮**Capstone Design 2020**🎮
+## 🎮 Capstone Design 2020 🎮
 
--Team Members : 팀 Edu-Unit [구자빈, 맹현영, 박세은, 손민국, 안형모]
+**\- Team Members :** 팀 Edu-Unit [구자빈, 맹현영, 박세은, 손민국, 안형모]
 
-- Title : Unity를 이용한 VR 교육용 프로그램 : Ver. COVID-19
+**\- Title :** Unity를 이용한 VR 교육용 프로그램 : Ver. COVID-19
 
-- 개발 툴 : Unity 3D - 스토리 : VR로 진행되며, 상황에 맞게 주어진 문제를 모두 해결하면 바이러스에 감염되지 않고 탈출하는 게임
+**\- 개발 툴 :** Unity 3D - 스토리 : VR로 진행되며, 상황에 맞게 주어진 문제를 모두 해결하면 바이러스에 감염되지 않고 탈출하는 게임
 
-- 게임 구성 :
+**\- 게임 구성 :**
 
-코로나	교회	UMA
-# 시작 Scene	# 퀴즈 장면 Scene	# UMA 활용
-게임 설명+흥미 유발	각 장소에서 5개의 퀴즈 해결,
-오답 시 생명(하트) 감소	사람을 표현할 수 있는 기술
-주요 구현 기능
+|코로나|교회|UMA|
+|:----:|:----:|:-----:|
+|#시작 Scene|#퀴즈 장면 Scene|#UMA 활용|
+게임 설명+흥미 유발|각 장소에서 5개의 퀴즈 해결,</br>오답 시 생명(하트) 감소|사람을 표현할 수 있는 기술|
+
+## 주요 구현 기능
 
 1. GoogleVR Prefabs를 이용한 시선 조절
 
@@ -23,16 +24,17 @@
   image
 
 3. Object 상호작용 발생 코드
-
-코드
+<details>
+  <summary>코드</summary>
 time += Time.deltaTime;           
 RaycastHit hit;               
 Vector3 forward = mainCam.transform.TransformDirection(Vector3.forward);              
 Debug.DrawRay(this. transform.position, forward*100, Color.green);              
 CursorGaugeImage. fillAmount = GaugeTimer;
+  </details>
 4. 퀴즈 Object 유->뮤 제어 코드
-
-코드
+<details>
+  <summary>코드</summary>
 if (GaugeTimer >= 1.0f && (hit. transform. tag. Equals( "ok5" )))
 {
 ok5.gameObject .SetActive( false) ;
@@ -42,15 +44,17 @@ HpManager 3. hp -= 1;
 lEnumerator wait5()
 {
 yield return new WaitFor Seconds(4.0f); quiz5.gameObject. SetActive(false) ;
-프로젝트 목적
+  </details>
+  
+## 프로젝트 목적
 
-- Unity를 이용한 VR 교육용 프로그램 개발
-- 코로나 바이러스에 대한 정보와 예방수칙 전파 및 코로나 바이러스의 확산 방지
+\- Unity를 이용한 VR 교육용 프로그램 개발        
+\- 코로나 바이러스에 대한 정보와 예방수칙 전파 및 코로나 바이러스의 확산 방지         
 
-활용방안/기대효과
+## 활용방안/기대효과
 
-많은 사람들 중에서도 미취학 아동과 청소년들을 타겟
-단순 주입식 교육보다 직접 보고 체험하는 것으로서 좀 더 효과적
-학교나 공공기관에서 교육용으로 많이 활용 가능
-코로나 바이러스에 대한 경각심을 심어 주고, 확산 방지에 기여 할 수 있을 것
-이후에 또 다른 감염 위험이 있는 바이러스가 생겨났을 때에도 동일한 효과를 발휘할 것
+1. 많은 사람들 중에서도 미취학 아동과 청소년들을 타겟       
+2. 단순 주입식 교육보다 직접 보고 체험하는 것으로서 좀 더 효과적        
+3. 학교나 공공기관에서 교육용으로 많이 활용 가능
+4. 코로나 바이러스에 대한 경각심을 심어 주고, 확산 방지에 기여 할 수 있을 것
+5. 이후에 또 다른 감염 위험이 있는 바이러스가 생겨났을 때에도 동일한 효과를 발휘할 것
