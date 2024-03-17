@@ -47,13 +47,14 @@
   ```cs
   if (GaugeTimer >= 1.0f && (hit. transform. tag. Equals( "ok5" )))
   {
-  ok5.gameObject .SetActive( false) ;
-  StartCoroutine(wait50))
-  HpManager3.hp -= 1;
+    ok5.gameObject .SetActive( false) ;
+    StartCoroutine(wait50))
+    HpManager3.hp -= 1;
   }
   lEnumerator wait5()
   {
-  yield return new WaitFor Seconds(4.0f); quiz5.gameObject. SetActive(false) ;
+    yield return new WaitFor Seconds(4.0f); quiz5.gameObject. SetActive(false) ;
+  }
   ```
 
   </details>
