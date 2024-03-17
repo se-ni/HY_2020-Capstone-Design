@@ -48,8 +48,8 @@
   if (GaugeTimer >= 1.0f && (hit. transform. tag. Equals( "ok5" )))
   {
   ok5.gameObject .SetActive( false) ;
-  Star tCorout ine(wait50))
-  HpManager 3. hp -= 1;
+  StartCoroutine(wait50))
+  HpManager3.hp -= 1;
   }
   lEnumerator wait5()
   {
